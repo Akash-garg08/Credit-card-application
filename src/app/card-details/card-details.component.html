@@ -1,0 +1,124 @@
+<div class="checkout">
+  <div class="credit-card-box">
+    <div class="flip">
+
+      <div class="front">
+        <div class="chip">
+          <img src="assets/images/chip.png" style="height: 60px; width: 60px" />
+        </div>
+        <div class="logo">
+          <img id="cardType" class="logoImage" src="assets/images/visa.png" style="height: 60px; width: 120px" />
+        </div>
+        <div class="number">
+          <span class="number-text">
+            #### #### #### ####
+          </span>
+          </div>
+        <div class="card-holder">
+          <label>Card holder</label>
+          <div class="holder-name" style="display: inline-block">NAME</div>
+        </div>
+        <div class="card-expiration-date">
+          <label>Expires</label>
+          <div style="display: inline-block">
+            <span class="month">MM</span>
+            <span>/</span>
+            <span class="year">YY</span>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="back">
+        <div class="strip"></div>
+        <div class="logo">
+          <img id="cardType" class="logoImage" src="assets/images/visa.png" style="height: 60px; width: 120px" />
+        </div>
+        <div class="ccv">
+          <label>CVV</label>
+          <div></div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  
+  <form class="form" [formGroup]="detailsForm" autocomplete="off" novalidate>
+    <fieldset>
+      <label for="card-number" style="margin-top: 10px;">Card Number</label>
+      <input
+        type="text"
+        id="card-number"
+        class="input-cart-number"
+        maxlength="19"
+        formControlName="cardNumber"
+        (keypress)= "onKeyPressCardNumber($event)"
+        (focus)="focusCreditCardElements('number', true)"
+        (blur)="focusCreditCardElements('number', false)"
+        (keyup)="updateCardDetails($event, 'cardNumber')"
+        (change)="updateCardDetails($event, 'cardNumber')"
+      />
+    </fieldset>
+
+    <fieldset>
+      <label for="card-holder">Card holder</label>
+      <input type="text" id="card-holder" formControlName="name"
+      (keypress)= "onKeyPressCardHolder($event)"
+      (focus)="focusCreditCardElements('card-holder', true)"
+      (blur)="focusCreditCardElements('card-holder', false)"
+      (keyup)="updateCardDetails($event, 'name')"
+      maxlength="20"
+      (change)="updateCardDetails($event, 'name')" />
+    </fieldset>
+
+    <fieldset class="fieldset-expiration">
+      <label for="card-expiration-month">Expiration date</label>
+      <div class="select" id="card-expiration-div">
+        <select id="card-expiration-month" data-align="center" (change)="updateExpirydateMonth()"
+        (focus)="focusCreditCardElements('card-expiration-date', true)"
+        (blur)="focusCreditCardElements('card-expiration-date', false)">
+          <option selected disabled>Month</option>
+          <option value="01">01</option>
+          <option value="02">02</option>
+          <option value="03">03</option>
+          <option value="04">04</option>
+          <option value="05">05</option>
+          <option value="06">06</option>
+          <option value="07">07</option>
+          <option value="08">08</option>
+          <option value="09">09</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+      </div>
+      <div class="select">
+        <select id="card-expiration-year" (change)="updateExpirydateYear()" (focus)="focusCreditCardElements('card-expiration-date', true)"
+        (blur)="focusCreditCardElements('card-expiration-date', false)">
+          <option selected disabled>Year</option>
+          <option value="21">2021</option>
+          <option value="22">2022</option>
+          <option value="23">2023</option>
+          <option value="24">2024</option>
+          <option value="25">2025</option>
+          <option value="26">2026</option>
+          <option value="27">2027</option>
+          <option value="28">2028</option>
+        </select>
+      </div>
+    </fieldset>
+    <fieldset class="fieldset-ccv">
+      <label for="card-ccv">CCV</label>
+      <input type="text" id="card-ccv" maxlength="3" formControlName="cvv"
+      (focus)="toggleCard(true)"
+      (keypress)= "inputOnlynumbers($event)"
+      (blur)="toggleCard(false);"
+      (keyup)="updateCardDetails($event, 'cvv')"
+      (change)="updateCardDetails($event, 'cvv')" />
+    </fieldset>
+    <button class="btn" [disabled]="!detailsForm.valid" (click)="apply()"><i class="fa fa-lock"></i> submit</button>
+  </form>
+</div>
