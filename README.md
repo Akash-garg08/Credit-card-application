@@ -21,7 +21,8 @@ https://friendly-chandrasekhar-572f81.netlify.app/
 ![CC_front2](https://user-images.githubusercontent.com/52153676/131913660-6e594de3-fe43-428a-bc60-8203a4de5540.JPG)
 
 3.
-![image](https://user-images.githubusercontent.com/52153676/131913562-e2ffacec-e9a3-4d61-a721-9badd93bfcb5.png)
+![CC_back](https://user-images.githubusercontent.com/52153676/131914637-0766cb8d-59cb-43b5-83f2-ac4e7f49a2df.JPG)
+
 
 
 
