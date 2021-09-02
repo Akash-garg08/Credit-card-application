@@ -353,3 +353,6 @@ Credit Card
 .borderClass {
   border: 1px solid #C1E0FF;
 }
+.inputFocusBorder {
+  border: 1px solid #1981e9 !important;
+}

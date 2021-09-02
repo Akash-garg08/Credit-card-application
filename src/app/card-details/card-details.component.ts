@@ -132,6 +132,7 @@ export class CardDetailsComponent implements OnInit {
 
   focusCreditCardElements(className: string, focus: boolean, formElement?: string) {
     focus ? $('.' + className).addClass('borderClass') : $('.' + className).removeClass('borderClass');
+    focus ? $('.' + formElement).addClass('inputFocusBorder') : $('.' + formElement).removeClass('inputFocusBorder');
   }
 
   onKeyPressCardNumber(event:any) {
