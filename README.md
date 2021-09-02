@@ -2,6 +2,30 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.3.
 
+# Demo
+
+https://friendly-chandrasekhar-572f81.netlify.app/
+
+# Functionality overview
+
+1. User can enter card details.
+2. Appropriate validations are enabled in the form.
+3. Card type is automatically detected according to the card number.
+
+# Screenshots
+
+1.
+![CC_main](https://user-images.githubusercontent.com/52153676/131913623-e7c76187-9717-4d9a-ba0c-acf632827871.JPG)
+
+2.
+![CC_front2](https://user-images.githubusercontent.com/52153676/131913660-6e594de3-fe43-428a-bc60-8203a4de5540.JPG)
+
+3.
+![image](https://user-images.githubusercontent.com/52153676/131913562-e2ffacec-e9a3-4d61-a721-9badd93bfcb5.png)
+
+
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
